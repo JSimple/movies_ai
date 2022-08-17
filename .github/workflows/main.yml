@@ -1,6 +1,6 @@
 name: Run bot
 on:
-  # push:
+  push:
   # pull_request:
   schedule:
   - cron: '*/10 * * * *'  # every 10 minutes
