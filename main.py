@@ -1,5 +1,5 @@
 import tweepy
-from keys import *
+# from keys import *
 import os
 
 from generator import *
