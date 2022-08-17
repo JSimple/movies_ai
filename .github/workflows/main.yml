@@ -20,7 +20,7 @@ jobs:
     - name: run pipenv shell
       run: pipenv shell
     - name: download en_core_web_sm
-    - run: python -m spacy download en_core_web_sm     
+      run: python -m spacy download en_core_web_sm     
     - name: Run main
       run: run python ./main.py
       env:
