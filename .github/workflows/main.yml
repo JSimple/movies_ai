@@ -3,12 +3,14 @@ on:
   push:
   pull_request:
   schedule:
-  - cron: '*/1 * * * *'  # every 5 minutes
+  - cron: '*/10 * * * *'  # every 10 minutes
 
 jobs:
   test_schedule:
     runs-on: ubuntu-latest
     steps:
+    - name: Install pipenv
+      run: pip install pipenv
     - name: Install dependencies
       run: pipenv install
     - name: Run main
