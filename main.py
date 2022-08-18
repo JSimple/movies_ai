@@ -15,4 +15,10 @@ client = tweepy.Client(
 ## THE BOT ITSELF ##
 
 logline = generate_logline()
+take = 1
+
+while len(logline) >= 280 and take <= 5:
+	logline = generate_logline()
+	take += 1
+
 client.create_tweet(text = logline)
