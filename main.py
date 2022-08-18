@@ -17,8 +17,9 @@ client = tweepy.Client(
 logline = generate_logline()
 take = 1
 
-while len(logline) >= 280 and take <= 5:
+while len(logline) > 280 and take <= 5:
 	logline = generate_logline()
 	take += 1
 
-client.create_tweet(text = logline)
+if len(logline) <= 280:
+    client.create_tweet(text = logline)
